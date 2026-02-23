@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details | True Lean Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: { blue: '#00f3ff', purple: '#bc13fe', pink: '#ff007f' },
+                        dark: { 900: '#030014', 800: '#0a0520', 700: '#150a30' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Outfit', 'sans-serif'] },
+                    animation: { 'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite' },
+                    backgroundImage: { 'hero-pattern': "url('./hero-bg.png')" }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass-panel { @apply bg-white/5 backdrop-blur-lg border border-white/10; }
+            .box-glow-blue { box-shadow: 0 0 15px rgba(0, 243, 255, 0.3), inset 0 0 15px rgba(0, 243, 255, 0.1); }
+            .box-glow-purple { box-shadow: 0 0 15px rgba(188, 19, 254, 0.3), inset 0 0 15px rgba(188, 19, 254, 0.1); }
+        }
+    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body
+    class="bg-dark-900 text-gray-300 font-sans antialiased selection:bg-neon-blue selection:text-white overflow-x-hidden flex flex-col min-h-screen">
+
+    <div
+        class="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-dark-800 via-dark-900 to-black pointer-events-none">
+    </div>
+    <div
+        class="fixed inset-0 z-[-1] opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] pointer-events-none mix-blend-overlay">
+    </div>
+
+    <nav id="navbar" class="fixed w-full z-50 top-0 transition-all duration-300 glass-panel border-b-0 py-4">
+        <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+            <a href="index.html" class="flex items-center group">
+                <img src="./logo.png" alt="True Lean Solutions Logo"
+                    class="max-h-12 w-auto object-contain group-hover:scale-105 transition-transform" />
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide items-center">
+                <a href="index.html#services" class="hover:text-neon-blue transition-colors">Services</a>
+                <a href="index.html#vision" class="hover:text-neon-purple transition-colors">Vision</a>
+                <a href="index.html#contact" class="hover:text-neon-pink transition-colors">Contact</a>
+            </div>
+            <a href="mailto:Success@TrueLeanSolutions.com"
+                class="hidden md:inline-block px-6 py-2 rounded-full font-bold text-sm bg-gradient-to-r from-neon-blue to-neon-purple text-dark-900 hover:shadow-[0_0_20px_rgba(0,243,255,0.6)] transition-all duration-300 transform hover:-translate-y-1">
+                Initialize System
+            </a>
+        </div>
+    </nav>
+
+    <section class="relative pt-40 pb-10 overflow-hidden border-b border-white/10 flex-grow">
+        <div class="absolute inset-0 z-0 bg-hero-pattern bg-cover bg-center opacity-10 mix-blend-screen scale-105">
+        </div>
+        <div class="container mx-auto px-6 lg:px-12 relative z-10">
+            <a href="it-recruiting.html"
+                class="inline-flex items-center gap-2 text-neon-blue hover:text-white transition-colors mb-12 text-sm font-mono tracking-widest uppercase reveal-up">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Return to Talent List
+            </a>
+
+            <div class="glass-panel p-8 md:p-12 rounded-2xl border-t-2 border-neon-blue reveal-up shadow-2xl relative">
+                <!-- Data will be injected here via JavaScript -->
+                <div id="job-content" class="min-h-[40vh]">
+                    <div class="animate-pulse flex space-x-4">
+                        <div class="flex-1 space-y-6 py-1">
+                            <div class="h-6 bg-white/10 rounded w-1/4"></div>
+                            <div class="space-y-3">
+                                <div class="h-4 bg-white/10 rounded"></div>
+                                <div class="h-4 bg-white/10 rounded w-5/6"></div>
+                                <div class="h-4 bg-white/10 rounded w-4/6"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-white/10 py-12 relative overflow-hidden mt-auto">
+        <div class="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <div class="flex items-center">
+                    <img src="./logo.png" alt="True Lean Solutions Logo" class="max-h-8 w-auto object-contain" />
+                </div>
+                <a href="tel:+18487775326"
+                    class="text-gray-400 hover:text-neon-blue transition-colors font-mono text-sm flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                        </path>
+                    </svg>
+                    +1 (848) 777-LEAN
+                </a>
+            </div>
+            <div class="text-center md:text-right text-gray-500 text-sm">
+                <p>&copy; <span id="year"></span> True Lean Solutions. All systems operational.</p>
+                <p class="mt-1">Website made by <span class="font-bold text-white ml-1">GD Enterprises</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Set dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Job Details Database
+        const jobsData = {
+            'tls19': {
+                title: 'Golang Developer',
+                location: 'India',
+                status: 'HOT',
+                posted: 'Recent',
+                description: `
+                    <h2 class="text-2xl font-bold text-neon-blue mb-4">Position Overview</h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">We are seeking a deeply technical Golang Developer to spearhead our backend systems transformation. You will architect robust microservices, optimize high-throughput data processing algorithms, and ensure extreme reliability within our Kubernetes-orchestrated environment. This is a critical infrastructure role.</p>
+                    
+                    <h3 class="text-xl font-bold text-white mb-3">Core Responsibilities</h3>
+                    <ul class="list-disc pl-5 text-gray-400 mb-6 space-y-2">
+                        <li>Design and deploy hyper-scalable Golang microservices.</li>
+                        <li>Maintain and optimize existing highly concurrent processing pipelines.</li>
+                        <li>Integrate complex API data structures securely.</li>
+                        <li>Implement robust testing and CI/CD operations for seamless deployment.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-white mb-3">Technical Requirements</h3>
+                    <ul class="list-disc pl-5 text-gray-400 mb-8 space-y-2">
+                        <li>Deep expertise in Go (Golang) and concurrency concepts (goroutines, channels).</li>
+                        <li>Experience scaling systems on AWS or GCP.</li>
+                        <li>Strong grasp of containerization (Docker, Kubernetes).</li>
+                        <li>Solid understanding of gRPC and REST protocol integration.</li>
+                    </ul>
+                `
+            },
+            'tls1': {
+                title: 'DevOps Engineer',
+                location: 'Remote',
+                status: 'Secured',
+                posted: 'Closed',
+                description: `
+                    <h2 class="text-2xl font-bold text-neon-blue mb-4">Position Overview</h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">As a DevOps Engineer, you will maintain the underlying arteries of our continuous delivery pipelines and infrastructure-as-code deployments. Automation is the absolute directive. You will architect zero-downtime mechanisms and rigorous security protocols.</p>
+                    
+                    <h3 class="text-xl font-bold text-white mb-3">Core Responsibilities</h3>
+                    <ul class="list-disc pl-5 text-gray-400 mb-6 space-y-2">
+                        <li>Provision unshakeable cloud architecture via Terraform and Ansible.</li>
+                        <li>Overhaul and maintain automated Azure/AWS release pipelines.</li>
+                        <li>Embed rigorous security telemetry across all integration nodes.</li>
+                        <li>Automate routine infrastructure diagnostic reporting.</li>
+                    </ul>
+                `
+            },
+            'tls12': {
+                title: 'Technical Product Owner',
+                location: 'Remote / Hybrid',
+                status: 'Secured',
+                posted: 'Closed',
+                description: `
+                    <h2 class="text-2xl font-bold text-neon-blue mb-4">Position Overview</h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Driving product vision requires intense technical synchronization. The Technical Product Owner bridges our engineering velocity with strategic business objectives, ensuring the backlog is optimized for rapid, scalable future-state deployments.</p>
+                    
+                    <h3 class="text-xl font-bold text-white mb-3">Core Responsibilities</h3>
+                    <ul class="list-disc pl-5 text-gray-400 mb-6 space-y-2">
+                        <li>Translate advanced business requirements into actionable engineering epics.</li>
+                        <li>Manage high-tier Scrum team backlogs and sprint cycles.</li>
+                        <li>Execute technical feasibility analysis for AI and cloud migrations.</li>
+                    </ul>
+                `
+            },
+            'tls9': {
+                title: 'Platform Architect',
+                location: 'Remote',
+                status: 'Secured',
+                posted: 'Closed',
+                description: `
+                    <h2 class="text-2xl font-bold text-neon-blue mb-4">Position Overview</h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">The Platform Architect defines the overarching technical vision and structural blueprints of our core SaaS applications. You will be responsible for ensuring extreme resiliency, microservice isolation, and compliance across all platform layers.</p>
+                `
+            },
+            'tls20': {
+                title: 'Mid-Level Java Developer',
+                location: 'United States',
+                status: 'Secured',
+                posted: 'Closed',
+                description: `
+                    <h2 class="text-2xl font-bold text-neon-blue mb-4">Position Overview</h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Executing enterprise-level application logic. The Mid-level Java Dev handles the core data structures and object-oriented implementations of our legacy modernization initiatives, utilizing Spring Boot and cloud-native practices.</p>
+                `
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const jobId = urlParams.get('id');
+
+        const contentContainer = document.getElementById('job-content');
+
+        if (jobId && jobsData[jobId]) {
+            const job = jobsData[jobId];
+
+            // Generate the dynamic content
+            contentContainer.innerHTML = `
+                <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-8 border-b border-white/10 pb-6">
+                    <div>
+                        <div class="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neon-blue/30 bg-neon-blue/5 text-neon-blue text-xs font-semibold tracking-widest uppercase">
+                            Position: ${jobId.toUpperCase()}
+                        </div>
+                        <h1 class="text-4xl md:text-5xl font-display font-black text-white mb-2">${job.title}</h1>
+                        <p class="text-gray-500 font-mono text-sm tracking-wide">LOCATION: ${job.location} | STATUS: ${job.status}</p>
+                    </div>
+                    <div class="mt-6 md:mt-0">
+                        <a href="mailto:success@trueleansolutions.com?subject=Application:%20${job.title}&body=📍%20Location:%0A🛂%20Work%20Auth:%0A📅%20Interview%20Avail:%0A⏳%20Notice%20Period:%0A💲%20Expected%20Rate:%0A🔗%20LinkedIn%20URI:%0A📎%20Resume%20Attached" 
+                            class="inline-block px-8 py-3 rounded-full font-bold text-sm bg-gradient-to-r from-neon-blue to-neon-purple text-dark-900 hover:shadow-[0_0_20px_rgba(0,243,255,0.6)] transition-all duration-300 transform hover:-translate-y-1">
+                            TRANSMIT RESUME >>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <div class="lg:col-span-2 prose prose-invert max-w-none">
+                        ${job.description}
+                    </div>
+                    
+                    <div class="lg:col-span-1">
+                        <div class="glass-panel p-6 rounded-xl bg-neon-purple/5 border border-neon-purple/30 sticky top-28">
+                            <h3 class="font-bold text-white mb-4 flex items-center gap-2">
+                                <svg class="w-5 h-5 text-neon-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                Application Protocol
+                            </h3>
+                            <p class="text-xs text-gray-400 mb-4 pb-4 border-b border-white/10">Ensure the following parameters are included in your transmission payload:</p>
+                            
+                            <ul class="text-sm text-gray-300 font-mono space-y-2">
+                                <li>> Current Location</li>
+                                <li>> Work Authorization</li>
+                                <li>> Interview Availability</li>
+                                <li>> Notice Period</li>
+                                <li>> Hourly Rate (C2C)</li>
+                                <li>> LinkedIn URL</li>
+                                <li class="text-neon-pink mt-4">> Word/PDF Resume Array attached.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `;
+        } else {
+            // Job not found / Invalid ID
+            contentContainer.innerHTML = `
+                <div class="text-center py-20">
+                    <h1 class="text-4xl font-display font-black text-white mb-4">404 - POSITION NOT FOUND</h1>
+                    <p class="text-gray-400 mb-8">The requested transmission node does not exist or has been secured.</p>
+                    <a href="it-recruiting.html" class="inline-block px-8 py-3 rounded-full font-bold text-sm border border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-dark-900 transition-all">
+                        Return to Dashboard
+                    </a>
+                </div>
+            `;
+        }
+    </script>
+</body>
+
+</html>
