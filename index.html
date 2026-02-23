@@ -8,6 +8,7 @@
         content="True Lean Solutions: Next-gen technology and elite engineering talent that propel your business into tomorrow.">
     <title>True Lean Solutions | Engineering the Future</title>
     <!-- Tailwind CSS -->
+    <link rel="icon" type="image/png" href="./logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -59,6 +60,11 @@
             .glass-panel {
                 @apply bg-white/5 backdrop-blur-lg border border-white/10;
             }
+            @media (max-height: 750px) {
+                .hide-on-short {
+                    display: none !important;
+                }
+            }
         }
     </style>
     <!-- Google Fonts -->
@@ -99,7 +105,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <section class="relative min-h-screen flex items-center justify-center pt-20 pb-32 overflow-hidden">
         <!-- Background Image overlay -->
         <div
             class="absolute inset-0 z-0 bg-hero-pattern bg-cover bg-center bg-no-repeat opacity-30 mix-blend-screen scale-105 animate-[pulse-slow_8s_ease-in-out_infinite]">
@@ -123,14 +129,14 @@
                 Next-gen technology and elite engineering talent that propel your business into tomorrow. Quantumize
                 your systems and hyper-scale your growth.
             </p>
-            <div class="mt-12 flex flex-col sm:flex-row justify-center items-center w-full gap-4 sm:gap-6 relative z-10 reveal-up"
+            <div class="mt-12 flex flex-col md:flex-row justify-center items-center w-full gap-4 md:gap-6 relative z-10 reveal-up"
                 style="transition-delay: 300ms;">
                 <a href="#services"
-                    class="w-full sm:w-auto px-8 py-4 rounded-full font-bold text-center text-sm md:text-lg bg-white text-dark-900 hover:bg-neon-blue hover:text-dark-900 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,243,255,0.8)] transform hover:-translate-y-1">
+                    class="w-full md:w-auto px-8 py-4 rounded-full font-bold text-center text-sm md:text-lg bg-white text-dark-900 hover:bg-neon-blue hover:text-dark-900 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,243,255,0.8)] transform hover:-translate-y-1">
                     Explore Solutions
                 </a>
                 <a href="#contact"
-                    class="w-full sm:w-auto px-8 py-4 rounded-full font-bold text-center text-sm md:text-lg border border-white/20 glass-panel hover:border-neon-purple hover:text-neon-purple transition-all duration-300 hover:shadow-[0_0_30px_rgba(188,19,254,0.3)]">
+                    class="w-full md:w-auto px-8 py-4 rounded-full font-bold text-center text-sm md:text-lg border border-white/20 glass-panel hover:border-neon-purple hover:text-neon-purple transition-all duration-300 hover:shadow-[0_0_30px_rgba(188,19,254,0.3)]">
                     Accelerate Innovation
                 </a>
             </div>
@@ -138,7 +144,7 @@
 
         <!-- Animated scroll indicator -->
         <div
-            class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex-col items-center animate-bounce hidden sm:flex">
+            class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex-col items-center animate-bounce hidden lg:flex hide-on-short">
             <span class="text-xs text-gray-500 tracking-widest uppercase mb-2">Scroll</span>
             <div class="w-px h-16 bg-gradient-to-b from-neon-blue to-transparent"></div>
         </div>
